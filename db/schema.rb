@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_30_063816) do
+ActiveRecord::Schema.define(version: 2020_10_31_042252) do
 
   create_table "properties", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
-    t.string "prefecture"
-    t.integer "prefecture_id"
-    t.string "municipality"
-    t.string "address"
+    t.integer "postcode"
+    t.integer "prefecture_code"
+    t.string "address_city"
+    t.string "address_street"
+    t.string "address_building"
     t.string "title"
     t.string "description"
     t.string "details"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_10_30_063816) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
+    t.string "prefecture_name"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

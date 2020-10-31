@@ -12,20 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :prefecture, '都道府県' %>
-    <%= form.text_field :prefecture %>
+    <%= form.label :postcode, '郵便番号' %>
+    <%= form.text_field :postcode %>
   </div>
 
   <div class="field">
-    <%= form.label :municipality, '市区町村' %>
-    <%= form.text_field :municipality %>
+    <%= form.label :prefecture_code, '都道府県' %>
+    <%= form.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: '選択してください' }, class: 'form-control' %>
+    <%#= form.collection_select :prefecture_name, JpPrefecture::Prefecture.all, :name,:name, { prompt: '選択してください' }, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :address, '町名番地・建物部屋番号' %>
-    <%= form.text_field :address %>
+    <%= form.label :address_city, '市区町村' %>
+     <%= form.text_field :address_city %>
   </div>
 
+  <div class="field">
+    <%= form.label :address_street, '町名番地' %>
+    <%= form.text_field :address_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address_building, '建物名' %>
+    <%= form.text_field :address_building %>
+  </div>
 
   <div class="field">
     <%= form.label :location, 'ロケーション' %>
@@ -71,3 +81,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+

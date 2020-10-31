@@ -1,14 +1,24 @@
 {
-  "application.js": "/packs/js/application-cd9baa997ab2a6e5febb.js",
-  "application.js.map": "/packs/js/application-cd9baa997ab2a6e5febb.js.map",
+  "application.js": "/packs/js/application-e24dff9905b88022035f.js",
+  "application.js.map": "/packs/js/application-e24dff9905b88022035f.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-cd9baa997ab2a6e5febb.js"
+        "/packs/js/application-e24dff9905b88022035f.js"
       ],
       "js.map": [
-        "/packs/js/application-cd9baa997ab2a6e5febb.js.map"
+        "/packs/js/application-e24dff9905b88022035f.js.map"
+      ]
+    },
+    "jqueryjpostal": {
+      "js": [
+        "/packs/js/jqueryjpostal-4ff521cbcfb0c17a14d7.js"
+      ],
+      "js.map": [
+        "/packs/js/jqueryjpostal-4ff521cbcfb0c17a14d7.js.map"
       ]
     }
-  }
+  },
+  "jqueryjpostal.js": "/packs/js/jqueryjpostal-4ff521cbcfb0c17a14d7.js",
+  "jqueryjpostal.js.map": "/packs/js/jqueryjpostal-4ff521cbcfb0c17a14d7.js.map"
 }

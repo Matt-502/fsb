@@ -2,10 +2,11 @@ class CreateProperties < ActiveRecord::Migration[6.0]
   def change
     create_table :properties do |t|
       t.integer :user_id
-      t.string :prefecture
-      t.integer :prefecture_id
-      t.string :municipality
-      t.string :address
+      t.integer :postcode
+      t.integer :prefecture_code
+      t.string :address_city
+      t.string :address_street
+      t.string :address_building
       t.string :title
       t.string :description
       t.string :details

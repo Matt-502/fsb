@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    
   end
 
   # GET /properties/new
@@ -72,6 +73,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:prefecture, :prefecture_id, :municipality, :address, :title, :description, :details, :price, :user_id, :hobby, :layout, :location, :image)
+      params.require(:property).permit(:postcode,:prefecture_name,:prefecture_code, :address_city, :address_street, :address_building, :title, :description, :details, :price, :user_id, :hobby, :layout, :location, :image)
     end
 end

@@ -26,6 +26,8 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ransack'
+gem 'jp_prefecture'
+gem 'jquery-rails' 
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
