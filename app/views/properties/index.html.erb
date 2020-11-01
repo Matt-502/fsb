@@ -4,7 +4,25 @@
   <h1>物件一覧</h1>
   <div class="search-index">
     
-    
+  
+<%= search_form_for @q do |f| %>
+  <%= f.label :prefecture_code, "都道府県" %>
+  <%= f.search_field :prefecture_code_cont %>
+  <br>
+  <%= f.label :address_city, "市区町村" %>
+  <%= f.search_field :address_city_cont %>
+  <br>
+  <%= f.label :address_street, "番地" %>
+  <%= f.search_field :address_street_cont %>
+  <br>
+  <%= f.label :price,"価格" %>
+  <%= f.number_field :price_gteq %>万円〜
+  <%= f.number_field :price_lt %>万円
+  
+  <br>
+  <%= f.submit "検索" %>
+<% end %>
+
   </div>
   <div class="property-index">
     <% @properties.each do |property| %>
@@ -20,6 +38,10 @@
         <%= property.price %>
 
         <%= property.prefecture_code %>
+        <%= property.address_city %>
+        <%= property.address_street %>
+
+
         <%= property.hobby %>
         <%= property.layout %>
         <%= property.location %>

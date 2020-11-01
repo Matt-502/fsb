@@ -4,7 +4,9 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    # @properties = Property.all
+    @q = Property.ransack(params[:q])
+    @properties = @q.result(distinct: true)
   end
 
   # GET /properties/1
