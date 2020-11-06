@@ -39,12 +39,18 @@
 
   <div class="field">
     <%= form.label :location, 'ロケーション' %>
-    <%= form.text_field :location %>
+    <% ["山","海","川","湖","別荘地","離島","雪国","駅徒歩圏内","IC近く","スーパー1km以内","コンビニ1km以内","病院","小学校","中学校"].each do |location| %>
+      <%= form.check_box :location, {multiple: true}, location, nil %>
+      <%= location %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :hobby, '趣味' %>
-    <%= form.text_field :hobby %>
+    <% ["キャンプ","サーフィン","ウィンドサーフィン","スノーボード","スキー","ゴルフ","川釣り","海釣り","登山","サバイバルゲーム","サイクリング","カヌー","ジェットスキー","ウェイクボード"].each do |hobby| %>
+      <%= form.check_box :hobby, {multiple: true}, hobby, nil %>
+      <%= hobby %>
+    <% end %>
   </div>
 
    <div class="field">
