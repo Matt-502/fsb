@@ -1,13 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
   <% if @property.image? %>
     <%= image_tag @property.image.url%>
   <% else %>
     <%= image_tag "noimage.png" %>
   <% end %>
 </p>
+
+<% if user_signed_in? %>
+  <% if @property.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+      <p><span>お気に入り解除: </span><%=link_to @property.favorites.count, property_favorites_path(@property.id), method: :delete %></p>
+  <% else %>
+      <p><span>お気に入り登録: </span><%=link_to @property.favorites.count, property_favorites_path(@property.id), method: :post %></p>
+  <% end %>
+<% else %>
+  <p><span>お気に入り数: </span><%= property.favorites.count %></p>
+<% end %>
 
 
 
@@ -27,24 +36,21 @@
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>物件説明</strong>
   <%= @property.description %>
 </p>
 
 <p>
-  <strong>Details:</strong>
+  <strong>物件概要</strong>
   <%= @property.details %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>希望価格</strong>
   <%= @property.price %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @property.user_id %>
-</p>
+
 
 <% if user_signed_in? && current_user.id == @property.user_id %>
     <%= link_to "編集", edit_property_path(@property) %>

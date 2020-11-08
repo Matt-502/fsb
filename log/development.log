@@ -4751,3 +4751,146 @@ Processing by PropertiesController#new as HTML
 Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 12711)
 
 
+  [1m[35m (5.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1061160113220250890', 0)[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnsToUsers (20201108030947)
+  [1m[35m (24.0ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE `users` ADD `phone_number` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20201108030947')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1061160113220250890')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1061160113220250890', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateFavorites (20201108040711)
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE `favorites` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `property_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20201108040711')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1061160113220250890')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2020-11-08 18:23:11 +0900
+  [1m[35m (3.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 267.7ms | Allocations: 47059)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-11-08 18:23:15 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 18.0ms | Allocations: 8544)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/matt/Desktop/fsb_app/fsb_repo/public/packs
+[Webpacker] Hash: 7a8e38e5acfdfca79771
+Version: webpack 4.44.2
+Time: 8763ms
+Built at: 2020/11/08 18:23:23
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-e24dff9905b88022035f.js    789 KiB    application  [emitted] [immutable]  application
+  js/application-e24dff9905b88022035f.js.map    839 KiB    application  [emitted] [dev]        application
+    js/jqueryjpostal-eaf5ceae93adce2eef9c.js    742 KiB  jqueryjpostal  [emitted] [immutable]  jqueryjpostal
+js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map    791 KiB  jqueryjpostal  [emitted] [dev]        jqueryjpostal
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-e24dff9905b88022035f.js js/application-e24dff9905b88022035f.js.map
+Entrypoint jqueryjpostal = js/jqueryjpostal-eaf5ceae93adce2eef9c.js js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 737 bytes {application} [built]
+[./app/javascript/packs/jqueryjpostal.js] 19.3 KiB {jqueryjpostal} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {jqueryjpostal} [built]
+    + 110 hidden modules
+
+[Webpacker] Compiled all packs in /Users/matt/Desktop/fsb_app/fsb_repo/public/packs
+[Webpacker] Hash: 7a8e38e5acfdfca79771
+Version: webpack 4.44.2
+Time: 5589ms
+Built at: 2020/11/08 18:23:23
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-e24dff9905b88022035f.js    789 KiB    application  [emitted] [immutable]  application
+  js/application-e24dff9905b88022035f.js.map    839 KiB    application  [emitted] [dev]        application
+    js/jqueryjpostal-eaf5ceae93adce2eef9c.js    742 KiB  jqueryjpostal  [emitted] [immutable]  jqueryjpostal
+js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map    791 KiB  jqueryjpostal  [emitted] [dev]        jqueryjpostal
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-e24dff9905b88022035f.js js/application-e24dff9905b88022035f.js.map
+Entrypoint jqueryjpostal = js/jqueryjpostal-eaf5ceae93adce2eef9c.js js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 737 bytes {application} [built]
+[./app/javascript/packs/jqueryjpostal.js] 19.3 KiB {jqueryjpostal} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {jqueryjpostal} [built]
+    + 110 hidden modules
+
+[Webpacker] Compiling...
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 8745ms (Views: 8729.9ms | ActiveRecord: 13.8ms | Allocations: 27572)
+
+
+[Webpacker] Compiled all packs in /Users/matt/Desktop/fsb_app/fsb_repo/public/packs
+[Webpacker] Hash: 7a8e38e5acfdfca79771
+Version: webpack 4.44.2
+Time: 1647ms
+Built at: 2020/11/08 18:23:28
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-e24dff9905b88022035f.js    789 KiB    application  [emitted] [immutable]  application
+  js/application-e24dff9905b88022035f.js.map    839 KiB    application  [emitted] [dev]        application
+    js/jqueryjpostal-eaf5ceae93adce2eef9c.js    742 KiB  jqueryjpostal  [emitted] [immutable]  jqueryjpostal
+js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map    791 KiB  jqueryjpostal  [emitted] [dev]        jqueryjpostal
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-e24dff9905b88022035f.js js/application-e24dff9905b88022035f.js.map
+Entrypoint jqueryjpostal = js/jqueryjpostal-eaf5ceae93adce2eef9c.js js/jqueryjpostal-eaf5ceae93adce2eef9c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 737 bytes {application} [built]
+[./app/javascript/packs/jqueryjpostal.js] 19.3 KiB {jqueryjpostal} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {jqueryjpostal} [built]
+    + 110 hidden modules
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 16235ms (Views: 16209.0ms | ActiveRecord: 1.0ms | Allocations: 135893)
+
+
+Started GET "/properties" for ::1 at 2020-11-08 18:43:29 +0900
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (10.0ms)[0m  [1m[34mSELECT DISTINCT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/index.html.erb:28
+  Rendered properties/index.html.erb within layouts/application (Duration: 61.7ms | Allocations: 4399)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 131ms (Views: 95.5ms | ActiveRecord: 23.3ms | Allocations: 12624)
+
+
+Started GET "/properties?q%5Bprefecture_code_cont%5D=&q%5Baddress_city_cont%5D=&q%5Baddress_street_cont%5D=&q%5Bprice_gteq%5D=&q%5Bprice_lt%5D=&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2020-11-08 18:43:32 +0900
+Processing by PropertiesController#index as HTML
+  Parameters: {"q"=>{"prefecture_code_cont"=>"", "address_city_cont"=>"", "address_street_cont"=>"", "price_gteq"=>"", "price_lt"=>""}, "commit"=>"検索"}
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/index.html.erb:28
+  Rendered properties/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1491)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.6ms | Allocations: 8571)
+
+

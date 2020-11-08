@@ -1,5 +1,6 @@
 class Property < ApplicationRecord
   belongs_to :user
+  has_many :favorites
 
   validates :prefecture_code, presence: true
   validates :postcode, presence: true  
@@ -25,5 +26,10 @@ class Property < ApplicationRecord
   def prefecture_name=(prefecture_name)
     self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
   end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
+
 
 end
