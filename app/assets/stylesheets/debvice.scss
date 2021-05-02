@@ -1,0 +1,33 @@
+.login-head{
+  font-size: 1.3em;
+  padding: 10px 20px;
+  border-left: 20px solid #1e73be;
+}
+.login-field{
+  padding: 0 40px;
+  font-size: 0.9em;
+
+  .field{
+    padding-top: 15px;
+  }
+  input{
+    width: 40%;
+  }
+  .actions{
+    padding-top: 40px;
+    width: 500px;
+    input{
+      font-weight: bold;
+      padding: 5px;
+      border: unset;
+      color: #fff;
+      border-radius: 5px;
+      background-color: #bfba1f;
+    }
+  }
+  p {
+    a{
+      color: #0044CC;
+    }
+  }
+}
