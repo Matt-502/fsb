@@ -155,3 +155,9 @@ p{
   height: 20px;
   overflow: hidden;
 }
+
+.page-head-left{
+  font-size: 1.3em;
+  padding: 10px 20px;
+  border-left: 20px solid #1e73be;
+}
