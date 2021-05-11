@@ -43,6 +43,10 @@ a:visited {
   color: #505157;
 }
 
+p{
+  margin: 1.5em 0;
+}
+
 .header-logo {
   float: left;
   padding-left: 45px;
@@ -150,4 +154,10 @@ a:visited {
   margin: 0px;
   height: 20px;
   overflow: hidden;
+}
+
+.page-head-left{
+  font-size: 1.3em;
+  padding: 10px 20px;
+  border-left: 20px solid #1e73be;
 }
